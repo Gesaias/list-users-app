@@ -35,11 +35,26 @@ importers:
       '@angular/router':
         specifier: ^18.2.0
         version: 18.2.6(@angular/common@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.6(@angular/animations@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10)))(rxjs@7.8.1)
+      '@fortawesome/angular-fontawesome':
+        specifier: ^0.15.0
+        version: 0.15.0(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))
+      '@fortawesome/free-brands-svg-icons':
+        specifier: ^6.6.0
+        version: 6.6.0
+      '@fortawesome/free-regular-svg-icons':
+        specifier: ^6.6.0
+        version: 6.6.0
+      '@fortawesome/free-solid-svg-icons':
+        specifier: ^6.6.0
+        version: 6.6.0
       '@ng-icons/core':
-        specifier: ^25.1.0
+        specifier: ^25.6.1
         version: 25.6.1
+      '@ng-icons/font-awesome':
+        specifier: ^29.5.1
+        version: 29.5.1
       '@ng-icons/lucide':
-        specifier: ^26.3.0
+        specifier: ^26.5.0
         version: 26.5.0
       '@spartan-ng/ui-accordion-brain':
         specifier: 0.0.1-alpha.356
@@ -122,6 +137,9 @@ importers:
       embla-carousel-angular:
         specifier: ^14.0.0
         version: 14.2.1(@angular/common@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))
+      lucide-angular:
+        specifier: ^0.446.0
+        version: 0.446.0(@angular/common@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))
       ngx-scrollbar:
         specifier: ^13.0.1
         version: 13.0.3(@angular/cdk@18.2.6(@angular/common@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/common@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1)
@@ -1352,6 +1370,31 @@ packages:
     resolution: {integrity: sha512-vH9PiIMMwvhCx31Af3HiGzsVNULDbyVkHXwlemn/B0TFj/00ho3y55efXrUZTfQipxoHC5u4xq6zblww1zm1Ig==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@fortawesome/angular-fontawesome@0.15.0':
+    resolution: {integrity: sha512-oxmJDYGNSym5ycFR0LX4ZOPAU+wWmMAznYpkm5DNAtWWkhMLcrZl15eZQmVIEE+qruQ7JiVrg3tpo8bEkFlDgw==}
+    peerDependencies:
+      '@angular/core': ^18.0.0
+
+  '@fortawesome/fontawesome-common-types@6.6.0':
+    resolution: {integrity: sha512-xyX0X9mc0kyz9plIyryrRbl7ngsA9jz77mCZJsUkLl+ZKs0KWObgaEBoSgQiYWAsSmjz/yjl0F++Got0Mdp4Rw==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/fontawesome-svg-core@6.6.0':
+    resolution: {integrity: sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-brands-svg-icons@6.6.0':
+    resolution: {integrity: sha512-1MPD8lMNW/earme4OQi1IFHtmHUwAKgghXlNwWi9GO7QkTfD+IIaYpIai4m2YJEzqfEji3jFHX1DZI5pbY/biQ==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-regular-svg-icons@6.6.0':
+    resolution: {integrity: sha512-Yv9hDzL4aI73BEwSEh20clrY8q/uLxawaQ98lekBx6t9dQKDHcDzzV1p2YtBGTtolYtNqcWdniOnhzB+JPnQEQ==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-solid-svg-icons@6.6.0':
+    resolution: {integrity: sha512-IYv/2skhEDFc2WGUcqvFJkeK39Q+HyPf5GHUrT/l2pKbtgEIv1al1TKd6qStR5OIwQdN1GZP54ci3y4mroJWjA==}
+    engines: {node: '>=6'}
+
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
     engines: {node: '>=12.22'}
@@ -1620,6 +1663,9 @@ packages:
 
   '@ng-icons/core@25.6.1':
     resolution: {integrity: sha512-o6vCttlzXvDZRYiOKOULr7fsX8gY/DwwxzBSrBQzwa/at+pC0xRoe6uczJ9Ato+y1EDWP/PlrEMAQfvokBA6tQ==}
+
+  '@ng-icons/font-awesome@29.5.1':
+    resolution: {integrity: sha512-/HQh+9oINXCljC4jIEuqBCNHz+tiMIg4FalahP5Ngwncj4r4LW6fImDhz9zeRREZrDUrPlrcO3v/k7tLP5d6VA==}
 
   '@ng-icons/lucide@26.5.0':
     resolution: {integrity: sha512-rW6iZo2LBlFvnpBLWs400mrKn/34PKt5R+Yfd6ZJz9lxq2TMJfNeJv/V4ylG9vYG3RkPa+KEJ+Q6/8IOceT0NA==}
@@ -4356,6 +4402,12 @@ packages:
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
+
+  lucide-angular@0.446.0:
+    resolution: {integrity: sha512-srEwSDmqfgh6+CeAvF58TUKORRq379eu4011Rgwmzdaugd7fIv//eHYj35St7+w/MyqeE1dwfogaf5wOm7KOsQ==}
+    peerDependencies:
+      '@angular/common': 13.x - 18.x
+      '@angular/core': 13.x - 18.x
 
   luxon@3.5.0:
     resolution: {integrity: sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==}
@@ -7572,6 +7624,30 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
+  '@fortawesome/angular-fontawesome@0.15.0(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))':
+    dependencies:
+      '@angular/core': 18.2.6(rxjs@7.8.1)(zone.js@0.14.10)
+      '@fortawesome/fontawesome-svg-core': 6.6.0
+      tslib: 2.7.0
+
+  '@fortawesome/fontawesome-common-types@6.6.0': {}
+
+  '@fortawesome/fontawesome-svg-core@6.6.0':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+
+  '@fortawesome/free-brands-svg-icons@6.6.0':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+
+  '@fortawesome/free-regular-svg-icons@6.6.0':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+
+  '@fortawesome/free-solid-svg-icons@6.6.0':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.0': {}
@@ -7918,6 +7994,10 @@ snapshots:
       '@tybys/wasm-util': 0.9.0
 
   '@ng-icons/core@25.6.1':
+    dependencies:
+      tslib: 2.7.0
+
+  '@ng-icons/font-awesome@29.5.1':
     dependencies:
       tslib: 2.7.0
 
@@ -11297,6 +11377,12 @@ snapshots:
   lru-cache@6.0.0:
     dependencies:
       yallist: 4.0.0
+
+  lucide-angular@0.446.0(@angular/common@18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10)):
+    dependencies:
+      '@angular/common': 18.2.6(@angular/core@18.2.6(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1)
+      '@angular/core': 18.2.6(rxjs@7.8.1)(zone.js@0.14.10)
+      tslib: 2.7.0
 
   luxon@3.5.0: {}
 

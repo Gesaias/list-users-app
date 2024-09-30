@@ -1,2 +1,29 @@
-<!-- <p>Test</p> -->
-<p>{{ user.name }}</p>
+<div
+  class="flex flex-col container elevation-3 py-4 text-base space-y-4 hover:cursor-pointer hover:elevation-5 rounded-xl bg-gray-100 mb-4"
+  (click)="onToggle(user)">
+  <div class="flex flex-row space-x-2 justify-center font-bold underline">
+    <p>{{ user.name }}</p>
+  </div>
+  <div class="flex flex-col space-y-1">
+    <div class="flex flex-row space-x-2 text-sm">
+      <h1 class="font-bold">E-mail:</h1>
+      <p>{{ user.email }}</p>
+    </div>
+    <div class="flex flex-row space-x-2 text-sm">
+      <h1 class="font-bold">Telefone:</h1>
+      <p>{{ user.telefone }}</p>
+    </div>
+  </div>
+
+  <div class="flex flex-row space-x-2 text-sm">
+    <h1 class="font-bold">Tipo:</h1>
+    <p>
+      Pessoa
+      @if(user.type_user?.type === 'fisica') {
+      Pessoa Fisíca
+      } @else {
+      Jurídica
+      }
+    </p>
+  </div>
+</div>
