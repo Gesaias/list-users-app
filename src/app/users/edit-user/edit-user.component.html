@@ -1,1 +1,58 @@
-<p>edit-user works!</p>
+@if (user) {
+<form (ngSubmit)="update()" class="flex flex-col justify-between p-4 h-full">
+  <div class="flex w-full justify-between">
+    <span></span>
+    <div class="flex flex-col items-center">
+      <h1 class="font-bold text-2xl">{{ user.name }}</h1>
+      <button hlmBtn class="bg-red-500 hover:bg-red-400 text-white rounded-full mt-2 p-2 font-bold w-48"
+        (click)="delete(user)">
+        <fa-icon [icon]="faTrash" class="mr-4" />
+        Deletar Usuário
+      </button>
+    </div>
+    <button hlmBtn class="bg-red-500 hover:bg-red-400 rounded-full px-3 text-white h-8" (click)="onClose()">
+      <fa-icon [icon]="faXmark" />
+    </button>
+  </div>
+
+
+  <div class="w-full justify-center items-center space-y-3">
+    <h1 class="font-bold text-lg">Altere as informações clicando nelas</h1>
+    form
+    <div class="flex flex-row space-x-2 text-base">
+      <label for="name" class="font-bold">Nome:</label>
+      <input type="text" name="name" class="text-black placeholder:text-black" [placeholder]="user.name" id="name"
+        [(ngModel)]="name" />
+    </div>
+    <div class="flex flex-row space-x-2 text-base">
+      <label for="email" class="font-bold">E-mail:</label>
+      <input type="email" name="email" class="text-black placeholder:text-black" [placeholder]="user.email" id="email"
+        [(ngModel)]="email" />
+    </div>
+    <div class="flex flex-row space-x-2 text-base">
+      <label for="telefone" class="font-bold">Telefone:</label>
+      <input type="tel" name="telefone" class="text-black placeholder:text-black" [placeholder]="user.telefone"
+        id="telefone" [(ngModel)]="telefone" />
+    </div>
+    <div class="flex flex-row space-x-2 text-base">
+      <label for="type_user" class="font-bold">Tipo:</label>
+      <select name="type_user" id="type_user" [(ngModel)]="type" class="px-4 bg-gray-500 rounded-full text-white"
+        [(ngModel)]="type">
+        <option value="">{{ user.type_user!.type }}</option>
+        <option value="fisico">Fisico</option>
+        <option value="juridico">Juridico</option>
+      </select>
+    </div>
+  </div>
+  <div class="w-full flex flex-col space-y-2">
+    <button type="button" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400" (click)="update()">{{
+      "Salvar Alteração" }}</button>
+    <button type="button" class="bg-red-500 text-white rounded-full p-2 hover:bg-red-400 mb-3"
+      (click)="onClose()">Cancelar</button>
+  </div>
+</form>
+} @else {
+<div class="flex flex-col justify-center items-center p-4 h-full font-bold text-lg">
+  Nenhum usuário selecionado ainda para mostrar!
+</div>
+}
