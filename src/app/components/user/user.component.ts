@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, UserItemComponent],
   templateUrl: './user.component.html',
-  styleUrl: './user.component.css'
 })
 export class UserComponent implements OnInit {
   users: WritableSignal<IUser[]> = signal<IUser[]>([]);

@@ -7,7 +7,6 @@ import { UserComponent } from "./components/user/user.component";
   standalone: true,
   imports: [RouterOutlet, UserComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'app';

@@ -6,7 +6,6 @@ import { IUser } from '../user/types';
   standalone: true,
   imports: [],
   templateUrl: './user-item.component.html',
-  styleUrl: './user-item.component.css'
 })
 export class UserItemComponent implements OnInit {
   @Input() user!: IUser;
