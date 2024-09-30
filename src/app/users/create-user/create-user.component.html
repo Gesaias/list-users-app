@@ -1,1 +1,44 @@
-<p>create-user works!</p>
+<div class="w-screen h-screen flex flex-col items-center justify-center">
+  <form class="flex flex-col bg-gray-300 p-16 rounded-lg elevation-3" (ngsubmit)="onSubmit()">
+    <h1 class="font-bold text-2xl w-full flex items-center justify-center text-center mb-10">Criar Usuário</h1>
+    <div class="flex flex-col w-full space-y-6">
+      <div class="flex flex-col space-x-2 text-base">
+        <div class="mb-2 h-full flex items-center">
+          <label for="name" class="text block text-gray-700 text-sm font-bold ml-2">Nome:</label>
+        </div>
+        <input type="text" name="name"
+          class="placeholder:text-black border border-gray-300 rounded-lg py-2 px-4 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Insira seu nome..." id="name" [(ngModel)]="name" />
+      </div>
+      <div class="flex flex-col space-x-2 text-base">
+        <div class="mb-2 h-full flex items-center">
+          <label for="email" class="text block text-gray-700 text-sm font-bold ml-2">E-mail:</label>
+        </div>
+        <input type="email" name="email"
+          class="placeholder:text-black border border-gray-300 rounded-lg py-2 px-4 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Insira seu email..." id="email" [(ngModel)]="email" />
+      </div>
+      <div class="flex flex-col space-x-2 text-base">
+        <div class="mb-2 h-full flex items-center">
+          <label for="telefone" class="text block text-gray-700 text-sm font-bold ml-2">Telefone:</label>
+        </div>
+        <input type="tel" name="telefone"
+          class="placeholder:text-black border border-gray-300 rounded-lg py-2 px-4 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Insira seu telefone..." id="telefone" [(ngModel)]="telefone" />
+      </div>
+      <div class="flex flex-col space-x-2 text-base">
+        <div class="mb-2 h-full flex items-center">
+          <label for="type" class="text block text-gray-700 text-sm font-bold ml-2">Selecione o tipo de usuário:</label>
+        </div>
+        <select name="type_user" id="type_user" [(ngModel)]="type"
+          class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          [(ngModel)]="type">
+          <option class="" value="fisico">Fisico</option>
+          <option value="juridico">Juridico</option>
+        </select>
+      </div>
+      <button type="button" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400" (click)="onSubmit()">{{
+      "Salvar Alteração" }}</button>
+    </div>
+  </form>
+</div>

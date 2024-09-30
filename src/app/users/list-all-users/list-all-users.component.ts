@@ -44,6 +44,8 @@ export class ListAllUsersComponent implements OnInit {
     });
   }
 
+  createUser(user: IUser): void {}
+
   updateUser(user: IUser): void {
     this.userService.update(user.id, { name: user.name, email: user.email, telefone: user.telefone, type_user: user.type_user!.type }).subscribe((updatedUser: IUser) => {
       this.getUsers();
