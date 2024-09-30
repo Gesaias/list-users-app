@@ -1,5 +1,5 @@
 import { Component, OnInit, signal, WritableSignal } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../services/user/user.service';
 import { IUser } from './types';
 import { UserItemComponent } from "../user-item/user-item.component";
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [UserItemComponent, CommonModule],
+  imports: [CommonModule, UserItemComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })

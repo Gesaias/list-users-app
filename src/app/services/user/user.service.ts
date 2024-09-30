@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IUser } from '../components/user/types';
+import { IUser } from '../../components/user/types';
+import CreateUserDto from './dto/create-user-dto';
+import UpdateUserDto from './dto/update-user-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  create(data: { name: string, email: string, telefone: string, type_user: string }): Observable<IUser> {
+  create(data: CreateUserDto): Observable<IUser> {
     return this.http.post<IUser>(this.apiUrl, data);
   }
 
@@ -23,7 +25,7 @@ export class UserService {
     return this.http.get<IUser>(`${this.apiUrl}/${id}`);
   }
 
-  update(id: number, data: { name?: string | undefined, email?: string | undefined, telefone?: string | undefined, type_user?: string | undefined }): Observable<IUser> {
+  update(id: number, data: UpdateUserDto): Observable<IUser> {
     return this.http.patch<IUser>(`${this.apiUrl}/${id}`, data);
   }
 

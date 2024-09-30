@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IUser } from '../user/types';
 
 @Component({
@@ -8,9 +8,13 @@ import { IUser } from '../user/types';
   templateUrl: './user-item.component.html',
   styleUrl: './user-item.component.css'
 })
-export class UserItemComponent {
+export class UserItemComponent implements OnInit {
   @Input() user!: IUser;
   @Output() onDeleteUser = new EventEmitter<IUser>();
+
+  ngOnInit(): void {
+    console.log(this.user);
+  }
 
   onDelete(user: IUser): void {}
 
