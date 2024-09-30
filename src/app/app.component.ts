@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UserComponent } from "./components/user/user.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
+  host: {
+    class: 'flex w-screen h-screen',
+  },
 })
 export class AppComponent {
   title = 'app';
